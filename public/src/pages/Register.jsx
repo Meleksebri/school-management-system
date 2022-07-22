@@ -5,7 +5,6 @@ import { useNavigate, Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { registerRoute } from "../utils/APIRoutes";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -61,33 +60,33 @@ export default function Register() {
     return true;
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (handleValidation()) {
-      const { email, username, password } = values;
-      const { data } = await axios.post(registerRoute, {
-        username,
-        email,
-        password,
-      });
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   if (handleValidation()) {
+  //     const { email, username, password } = values;
+  //     const { data } = await axios.post(registerRoute, {
+  //       username,
+  //       email,
+  //       password,
+  //     });
 
-      if (data.status === false) {
-        toast.error(data.msg, toastOptions);
-      }
-      if (data.status === true) {
-        localStorage.setItem(
-          process.env.REACT_APP_LOCALHOST_KEY,
-          JSON.stringify(data.user)
-        );
-        navigate("/");
-      }
-    }
-  };
+  //     if (data.status === false) {
+  //       toast.error(data.msg, toastOptions);
+  //     }
+  //     if (data.status === true) {
+  //       localStorage.setItem(
+  //         process.env.REACT_APP_LOCALHOST_KEY,
+  //         JSON.stringify(data.user)
+  //       );
+  //       navigate("/");
+  //     }
+  //   }
+  // };
 
   return (
     <>
       <FormContainer>
-        <form action="" onSubmit={(event) => handleSubmit(event)}>
+        <form action="">
           <div className="brand">
             <img src={Logo} alt="logo" />
             <h1>snappy</h1>
