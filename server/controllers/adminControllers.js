@@ -15,6 +15,28 @@ let mailTransporter = nodemailer.createTransport({
   },
 });
 
+// @desc create a new admin account
+exports.addNewAdmin = async (req, res) => {
+  try {
+    const { firstName, lastName, email, password } = req.body;
+    const existUser = User.findOne({ email });
+    if (existUser) return res.status(404).json({ msg: "Email already exists" });
+    const salt = bcrypt.genSaltSync(10);
+    const hash = await bcrypt.hashSync(password, salt);
+    const newAdmin = await User.create({
+      firstName,
+      lastName,
+      email,
+      hash,
+      role: "admin",
+    });
+    res.status(200).json({ msg: "new admin has been created successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json("something went wrong");
+  }
+};
+
 // @desc add new user
 // @params POST /api/v1/users/addUser
 // @access PRIVATE
