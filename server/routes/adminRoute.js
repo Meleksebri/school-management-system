@@ -15,6 +15,7 @@ const {
   updateClass,
   assignNewSubject,
   getUserInfo,
+  addNewAdmin,
 } = require("../controllers/adminControllers");
 const router = express.Router();
 
@@ -30,6 +31,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+router.post("/newAdmin", addNewAdmin);
 router.get("/pendedusers", getPendedUsers);
 router.post("/newUser", addNewUser);
 router.delete("/deleteUser/:userId", deletePendedUsers);
