@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="https://www.manaarah.com/wp-content/uploads/School-Management-System.webp" alt="Logo">
 
 Managing any educational institute is not a piece of cake. Managing students, staff, timetable, exams, class test, attendance, fees collection, accounts, etc. It does not end here. Parents are always worried about their child's performance and they need satisfaction. They care about their child's academic statics. Moreover, I have seen schools using huge registers to mark the attendance of their students and staff. And I have also seen that schools manage their admission, exams data, class tests data, etc, manually. I know it takes a lot of time and is very difficult to manage.
 Well! it's time to put check on these worries. Skooly presents you a free online school management system to make conventional tasks easier. This is the one-stop solution to manage, track and record everything within your school or organization. My free online school management system includes admin, teacher and students panel, exams module, attendance module, class tests management, homework management, students, parents and teachers management, and many more awesome and unique features than any other online school management system in the market like an integrated chat application that allows users to talk to each others easily and interact together to bring teachers and students closer to each other without the need to use third-party messaging application and an Artificial intelligence model that controls profile pictures uploaded by users . This Ai model is a deep learning object detection model that aims to identify single or multiple persons in an image. If the image uploaded by the user contains a person ( face ) the model will give a positive result and the image will be approved however if it is a random image that doesn't have a person in it it will be rejected and that way users can only upload appropriate images. You can read more about the Ai model used in this project <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd"> here </a>
@@ -266,6 +266,11 @@ I will list resources I find helpful and would like to give credit to. I've incl
 * [Socket.io](https://socket.io/)
 * [Mui](https://mui.com/store/)
 * [Iconify](https://icon-sets.iconify.design/)
+* [Redux](https://redux-toolkit.js.org/)
+* [Nodemailer](https://mailtrap.io/blog/nodemailer-gmail/)
+* [Multer](https://www.npmjs.com/package/multer)
+
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
