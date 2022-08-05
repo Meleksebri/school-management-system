@@ -22,8 +22,11 @@
     <a href="https://github.com/Meleksebri/school-management-system/issues">Request Feature</a>
   </p>
 </div>
-
-
+<br/>
+<h3>Live demo : https://schoolanding.herokuapp.com/</h3>
+<p>To login to admin account , use : email: admin@gmail.com  , password: admin123
+<br></br>
+<br></br>
 
 <!-- TABLE OF CONTENTS -->
 <details>
